@@ -31,6 +31,8 @@ ALLOWED_HOSTS = ['10.21.75.37']
 # Application definition
 
 INSTALLED_APPS = [
+    # 3rd party Apps
+    'rest_framework',
     # Local App
     'msgs.apps.MsgsConfig',
     'django.contrib.admin',
