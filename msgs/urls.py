@@ -2,6 +2,6 @@ from django.urls import path
 
 from .views import MsgAPIController
 
-urlpattern = [
+urlpatterns = [
     path('messages', MsgAPIController.as_view()),
 ]
