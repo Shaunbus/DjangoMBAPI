@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['10.21.75.37']
 INSTALLED_APPS = [
     # 3rd party Apps
     'rest_framework',
+    'corsheaders',
     # Local App
     'msgs.apps.MsgsConfig',
     'django.contrib.admin',
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -52,6 +54,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'mb_api.urls'
 
